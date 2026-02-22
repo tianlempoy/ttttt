@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #FDFCFB;
+  --navy: #0F172A;
+  --gold: #C5A059;
+  --slate: #64748B;
+  --accent-gold: #D4AF37;
+  --primary: #0F172A;
+  --secondary: #C5A059;
+  --background: #FDFCFB;
+  --text: #0F172A;
+  --text-light: #64748B;
+  --blue-accent: #3B82F6;
+  --school-primary: #0F172A;
+  --school-secondary: #C5A059;
+  --school-background: #FDFCFB;
+  --school-text: #0F172A;
+  --school-text-light: #64748B;
+  --school-blue-accent: #3B82F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--ivory);
+  color: var(--navy);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-prestige {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Prestige Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism Ivory */
+.glass-nav {
+  background: rgba(253, 252, 251, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.ivory-card {
+  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.03);
+  box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.03);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.ivory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.08);
+  border-color: var(--gold);
+}
+
+/* Custom Scrollbar Premium */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+/* Special Buttons */
+.btn-premium {
+  @apply relative overflow-hidden transition-all duration-500 active:scale-95 flex items-center justify-center;
+}
+
+.btn-premium-gold {
+  @apply bg-[#C5A059] text-white shadow-xl shadow-amber-900/10 hover:bg-[#0F172A];
+}
+
+.btn-premium-navy {
+  @apply bg-[#0F172A] text-white shadow-xl shadow-blue-900/10 hover:bg-[#C5A059];
+}
