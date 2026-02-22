@@ -16,7 +16,7 @@ import StudentGallery from './components/StudentGallery';
 import SchoolHistory from './components/SchoolHistory';
 import AICreativeLab from './components/AICreativeLab';
 import AIScholar from './components/AIScholar';
-import PPDBRegistration from './components/PPDBRegistration';
+import PPDBRegistrationComponent from './components/PPDBRegistration';
 import AlumniNetwork from './components/AlumniNetwork';
 import LibraryPortal from './components/LibraryPortal';
 import SchoolProfile from './components/SchoolProfile';
@@ -92,7 +92,7 @@ const App: React.FC = () => {
         case Page.PRESTASI: return <AchievementsShowcase />;
         case Page.BERITA: return <NewsSection isFullPage={true} />;
         case Page.GALERI: return <StudentGallery />;
-        case Page.PPDB: return <PPDBRegistration />;
+        case Page.PPDB: return <PPDBRegistrationComponent />;
         case Page.LIBRARY: return <LibraryPortal />;
         case Page.ALUMNI: return <AlumniNetwork />;
         case Page.AI_HUB: return <AICreativeLab />;
